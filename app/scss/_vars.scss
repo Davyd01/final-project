@@ -1,0 +1,35 @@
+
+$main-color: #323264;
+$white-color: #fff;
+$alt-color: #46466E;
+$soft-color: #686887;
+
+$accent-color: #F0145A;
+
+$regular-color: #24A3FF;
+$regular-hover-color: #0085FF;
+$regular-active-color: #006CCF;
+
+$grey-color: #F5F5FA;
+$grey-alt-color: #EDEDF7;
+$grey-text-color: #B3B3BA;
+$grey-separator-color: #E6E6F0;
+
+$main-gradient: linear-gradient(129deg, #323264 0%, #323264 73.96%, #A54B5F 100%);
+$gradient-soft:  linear-gradient(42deg, #323264 14.33%, #323264 51.39%, #7A425E 87.53%);
+$gradient-red:  linear-gradient(323deg, #F0145A 6.7%, #693264 70.36%);
+$gradient-super-soft:  linear-gradient(229deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+$gradient-red-text:linear-gradient(90deg, #F0145A 0.84%, #EF8080 99.96%);
+
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1440px;
+$breakpoint-xxl: 1920px;
+
+@mixin gradient-text {
+  
+  background: $gradient-red-text;
+  color: transparent;
+  background-clip: text;
+}
+
