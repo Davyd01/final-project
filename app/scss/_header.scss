@@ -1,6 +1,7 @@
 
 .header {
   color: $white-color;
+  background: url('../img/Symbol.png') no-repeat 50%/auto 100%;
 
 		&__container {
 		}
@@ -9,63 +10,271 @@
       min-height: 100vh;
       display: flex;
       flex-flow: column;
+      justify-content: space-between;
+      
 		}
 
 		&__head {
 		}
 
 		&__social {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 15px;
+      background: rgba(245, 245, 250, 0.20);
+      margin: 0 -30px 15px;
+      align-items: center;
+
+      @media (min-width: $breakpoint-md) {
+        margin: 0 0 30px;
+        padding: 10px 0;
+        background: transparent;
+        justify-content: flex-start;
+        gap: 18px;
+      }
+      
 		}
 
 		&__lang {
+      display: flex;
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: 700;
+      
 		}
 
 		&__lang-item {
+      padding: 5px 7px;
+      border-radius: $main-radius;
+      cursor: pointer;
+      transition: $main-animation;
+      &.active {
+        background: $accent-color;
+      }
+      &:hover {
+        background: rgba(255, 255, 255, 0.20);
+      }
 		}
 
 		&__social-adress {
+      display: none;
+      @media (min-width: $breakpoint-md) {
+        display: block;
+      }
 		}
 
 		&__social-phone {
+      color: $white-color;
+      text-decoration: none;
+      font-weight: 700;
 		}
 
 		&__social-faceb {
+      display: none;
+      @media (min-width: $breakpoint-md) {
+        display: block;
+        // color: $white-color;
+        // text-decoration: none;
+        width: 24px;
+        height: 24px;
+      }
 		}
+
+    &__social-facebook {
+        width: 100%;
+        height: 100%;
+        fill: $white-color;
+        transition: all .5s linear;
+
+        &:hover {
+          fill: $accent-color;
+        }
+    }
 
 		&__logo {
-		}
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      position: relative;
+      @media (min-width: $breakpoint-md) {
+        margin: 0;
+      }
+
+      span {
+        font-size: 26px;
+        line-height: 24px;
+        color: $accent-color;
+        
+      }
+      
+      span + span {
+        font-size: 20px;
+        font-weight: 400;
+        color: $white-color;
+      }
+
+    }
 
 		&__logo-link {
+      width: 69px;
+      height: 32px;
 		}
 
 		&__logo-logo {
+      width: 100%;
+      height: 100%;
 		}
 
 		&__burger {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      border: 0;
+      outline: none;
+      width: 32px;
+      height: 32px;
+      border-radius: $main-radius;
+      cursor: pointer;
+      
+      @media (min-width: $breakpoint-md) {
+        display: none;
+      }
+
+      &:active {
+        background: $grey-separator-color;
+      }
+
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 18px;
+        height: 14px;
+        border-bottom: 2px solid $white-color;
+        border-top: 2px solid $white-color;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          height: 1.5px;
+          width: 100%;
+          left: 0;
+          transform: translateY(-50%);
+          background: $white-color;
+        }
+      }
 		}
 
 		&__nav {
+      position: fixed;
+      bottom: 0;
+      right: 8px;
+      left: 8px;
+      background: $white-color;
+      border-radius: 12px 12px 0px 0px;
+      transform: translateY(101%);
+      &.active {
+        transform: translate(0);
+      }
+      @media (min-width: $breakpoint-md) {
+        position: static;
+        border-radius: unset;
+        background: transparent;
+        transform: translate(0);
+
+      }
 		}
 
 		&__nav-close {
+      cursor: pointer;
 		}
 
 		&__nav-list {
+      
+
+      @media (min-width: $breakpoint-md) {
+        display: flex;
+        gap: 10px;
+      }
+      
 		}
 
 		&__nav-item {
+
 		}
 
 		&__nav-link {
+      text-decoration: none;
+      @media (min-width: $breakpoint-md) {
+
+        color: $white-color;
+        position: relative;
+        transition: $main-animation;
+
+        
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 2px;
+          background: $accent-color;
+          transform: scale(0);
+          transition: $main-animation;
+        }
+
+        &:hover::before {
+          transform: scale(1);
+        }
+
+        &:hover {
+          color: $accent-color;
+          // border-bottom: 1px solid $accent-color;
+        }
+      }
 		}
 
 		&__inner {
+      text-align: center;
+
 		}
 
 		&__inner-title {
 		}
 
 		&__goto {
+      width: 42px;
+      height: 42px;
+      margin: 40px auto 30px;
+      border-radius: 50%;
+      border: 2px solid $white-color;
+      cursor: pointer;
+      position: relative;
+      &:hover {
+        border: 2px solid $accent-color;
+      }
+      &:hover::before{
+        border-bottom: 2px solid $accent-color;
+        border-left: 2px solid $accent-color;
+
+      }
+
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 9px;
+        left: 12px;
+        width: 15px;
+        height: 15px;
+        border-bottom: 2px solid $white-color;
+        border-left: 2px solid $white-color;
+        transform: rotate(-45deg);
+      }
 		}
 }
 
@@ -74,6 +283,21 @@
 .header-social {
 
 		&__item {
+      position: relative;
+      &::before {
+        @media (min-width: $breakpoint-md) {
+          content: '';
+          position: absolute;
+          width: 6px;
+          height: 6px;
+          background: $white-color;
+          top: 50%;
+          right: -12px;
+          transform: translate(0, -50%);
+          border-radius: 50%;
+          pointer-events: none;
+        }
+      }
 		}
 }
 
