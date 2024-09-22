@@ -15,6 +15,12 @@
 		}
 
 		&__head {
+      @media (min-width: $breakpoint-lg) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 16px;
+      }
 		}
 
 		&__social {
@@ -26,11 +32,18 @@
       align-items: center;
 
       @media (min-width: $breakpoint-md) {
-        margin: 0 0 30px;
+        margin: 30px 0 20px;
         padding: 10px 0;
         background: transparent;
         justify-content: flex-start;
         gap: 18px;
+      }
+
+      @media (min-width: $breakpoint-lg) {
+        margin-top: 50px;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
       }
       
 		}
@@ -103,9 +116,7 @@
       align-items: center;
       gap: 4px;
       position: relative;
-      @media (min-width: $breakpoint-md) {
-        margin: 0;
-      }
+      
 
       span {
         font-size: 26px;
@@ -120,11 +131,30 @@
         color: $white-color;
       }
 
+      @media (min-width: $breakpoint-md) {
+        margin: 0;
+        span {
+          display: none;
+        }
+      }
+
+      @media (min-width: $breakpoint-lg) {
+        position: absolute;
+        left: 60px;
+        top: 50px;
+      }
+
     }
 
 		&__logo-link {
       width: 69px;
       height: 32px;
+
+      @media (min-width: $breakpoint-md) {
+        width: 130px;
+        height: 60px;
+        
+      }
 		}
 
 		&__logo-logo {
@@ -236,7 +266,7 @@
       display: block;
       background: $grey-color;
       @media (min-width: $breakpoint-md) {
-
+        font-weight: 700;
         color: $white-color;
         position: relative;
         transition: $main-animation;

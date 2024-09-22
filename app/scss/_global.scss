@@ -10,6 +10,7 @@ body {
 
 .wrapper {
   background: $gradient-super-soft;
+  
 }
 
 .container {
@@ -23,6 +24,7 @@ body {
 
   @media (min-width: $breakpoint-lg) {
     max-width: 964px;
+    position: relative;
   }
 
   @media (min-width: $breakpoint-xl) {
