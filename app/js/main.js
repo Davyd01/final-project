@@ -58,3 +58,32 @@
 //     });
 //   });
 // })();
+
+
+const swiper = new Swiper('.swiper', {
+  loop: true,
+  spaceBetween: 30,
+  grabCursor: true,
+  speed: 900,
+  effect: "cube",
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+
+
+
+});
+
+// const swiper = new Swiper('.swiper', {
+//   loop: true,
+//   spaceBetween: 30,
+//   grabCursor: true,
+//   speed: 900,
+//   pagination: {
+//     el: '.swiper-pagination',
+//     clickable: true, // Точки пагинации будут кликабельными
+//   },
+// });
+
