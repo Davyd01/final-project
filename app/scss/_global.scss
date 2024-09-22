@@ -10,6 +10,7 @@ body {
 
 .wrapper {
   background: $gradient-super-soft;
+  border-radius: 0px 0px 12px 12px;
   
 }
 
@@ -41,4 +42,10 @@ body {
   font-size: 38px;
   line-height: 46px;
   color: $white-color;
+}
+
+
+.svg {
+  
+  // display: none;
 }

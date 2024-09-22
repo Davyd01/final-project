@@ -1,0 +1,130 @@
+
+
+
+.services {
+
+  &__subtitle {
+
+    color: $regular-color;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 10px;
+    cursor: default;
+    transition: $main-animation;
+
+    &:hover {
+      color: $accent-color;
+    }
+
+    
+
+
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 31%;
+      left: 79px;
+      // transform: translate(-50%);
+      transform: rotate(-45deg);
+      width: 9px;
+      height: 9px;
+      // background: #000;
+      border-bottom: 2px solid $regular-color;
+      border-right: 2px solid $regular-color;
+      transition: $main-animation;
+
+    }
+
+    &:hover::before {
+      border-bottom: 2px solid $accent-color;
+      border-right: 2px solid $accent-color;
+    }
+  }
+
+  &__title {
+    @include gradient-text;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+
+
+    @media (min-width: $breakpoint-md) {
+      margin-bottom: 60px;
+      font-size: 38px;
+      line-height: 40px;
+    }
+
+  }
+
+  &__promoution {
+  }
+
+  &__promoution-inner {
+    display: flex;
+    gap: 30px;
+    
+    padding-bottom: 60px;
+    flex-direction: column;
+
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 60px;
+    }
+  }
+
+  &__promoution-section {
+    display: flex;
+    flex-direction: column;
+
+    &:last-child {
+      // margin-bottom: 60px;
+    }
+
+    @media (min-width: $breakpoint-md) {
+    flex: 1 1 45%;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      flex: 1 1 28%;
+      }
+  }
+
+  &__promoution-logo {
+    padding: 14px;
+    width: 92px;
+    height: 92px;
+    background: $white-color;
+    border-radius: 24px;
+    margin-bottom: 30px;
+  }
+
+  &__promoution-svg {
+    width: 64px;
+    height: 64px;
+    
+  }
+
+  &__promoution-content {
+
+    h3 {
+      margin-bottom: 15px;
+      font-size: 22px;
+      font-weight: 700;
+      color: $regular-color;
+    }
+
+    p {
+      color: $white-color;
+      line-height: 26px;
+      // font-weight: 400;
+      
+    }
+  }
+}
+
+
