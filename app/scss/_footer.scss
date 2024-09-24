@@ -1,0 +1,97 @@
+.footer {
+  margin-bottom: 100px;
+
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  padding-top: 30px;
+  border-top: 2px solid $grey-separator-color;
+
+  @media (min-width: $breakpoint-md) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+}
+
+  &__flex-adress {
+    color: $main-color;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 21px;
+    
+
+    a {
+      display: inline;
+      color: $regular-color;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      order: 1;
+      align-items: center;
+      margin-bottom: 0;
+    }
+  }
+
+  &__flex-social {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 30px;
+
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      order: 3;
+    }
+  }
+
+  &__flex-faceb {
+    width: 38px;
+    height: 38px;
+  }
+
+  &__flex-facebook {
+    width: 100%;
+    height: 100%;
+    fill: $regular-color;
+  }
+
+  &__flex-phone {
+    color: $alt-color;
+    font-weight: 700;
+    
+  }
+
+  &__flex-email {
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: lowercase;
+    color: $regular-color;
+  }
+
+  &__flex-copyrights {
+    background: $grey-text-color;
+    color: transparent;
+    background-clip: text;
+
+    @media (min-width: $breakpoint-md) {
+      display: flex;
+    flex-direction: column;
+    order: 2;
+    }
+    
+
+  }
+}
