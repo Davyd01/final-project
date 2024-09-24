@@ -1,12 +1,20 @@
 .gdpr {
 
   &__section {
+    @media (min-width: $breakpoint-xl) {
+      width: 1080px;
+      margin: 0 auto;
+    }
+    @media (min-width: $breakpoint-xxl) {
+      width: 1360px;
+      margin: 0 auto;
+    }
   }
 
   &__img {
     width: 315px;
     height: 300px;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
     
 
     img {
@@ -20,11 +28,18 @@
     @media (min-width: $breakpoint-md) {
       width: 648px;
       height: 500px;
+    }
 
-      img {
-        width: 100%;
-        height: 100%;
-      }
+    @media (min-width: $breakpoint-lg) {
+      width: 904px;
+      height: 500px;
+    }
+    @media (min-width: $breakpoint-xl) {
+      width: 1080px;
+      
+    }
+    @media (min-width: $breakpoint-xxl) {
+      width: 1360px;
     }
   }
 

@@ -7,6 +7,7 @@ const scss 					= require('gulp-sass')(require('sass'));
 const concat 				= require('gulp-concat');
 const browserSync 	= require('browser-sync').create();
 const autoprefixer 	= require('gulp-autoprefixer');
+const sass = require('gulp-sass')(require('sass'));
 const imagemin 			= require('gulp-imagemin');
 const webp 					= require('gulp-webp');
 const uglify 				= require('gulp-uglify-es').default;
@@ -96,6 +97,8 @@ function watching() {
 	watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
 	watch(['app/*.html']).on('change', browserSync.reload);
 }
+
+
 
 exports.styles = styles;
 exports.scripts = scripts;

@@ -1,0 +1,124 @@
+
+
+
+.teams {
+
+  &__title {
+    @include gradient-text;
+    margin-bottom: 30px;
+  }
+
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 60px;
+
+    @media (min-width: $breakpoint-md) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 60px;
+    }
+
+  }
+
+  &__profile {
+    margin: 0 auto;
+    
+
+    @media (min-width: $breakpoint-xl) {
+      flex: 0 1 28%;
+    }
+  }
+
+  &__flex-img {
+    width: 315px;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 12px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @media (min-width: $breakpoint-md) {
+      width: 294px;
+      height: 400px;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      width: 261px;
+      height: 400px;
+    }
+
+    @media (min-width: $breakpoint-xl) {
+      width: 400px;
+      height: 400px;
+    }
+
+    @media (min-width: $breakpoint-xxl) {
+      width: 493px;
+      height: 400px;
+    }
+  }
+
+  &__information {
+    color: $grey-text-color;
+    line-height: 22px;
+    font-size: 14px;
+    margin-top: 15px;
+
+    p {
+      position: relative;
+      cursor: pointer;
+
+      &::before {
+        content: '';
+        top: 0;
+        right: 0;
+        width: 32px;
+        height: 32px;
+        background: $grey-color;
+        position: absolute;
+        border-radius: 50%;
+      }
+      &::after {
+        content: '';
+        top: 50%;
+        right: 8px;
+        // background: white;
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-bottom: 2px solid $regular-color;
+        border-right: 2px solid $regular-color;
+        transform: rotate(-45deg) translateY(-50%);
+        transition: $main-animation;
+      }
+
+      &:hover a {
+        color: $accent-color;
+      }
+      
+      &:hover::after {
+        border-bottom: 2px solid $accent-color;
+        border-right: 2px solid $accent-color;
+      }
+    }
+  }
+
+  &__information-link {
+    @include secondary-gradient-text;
+    display: inline-block;
+    font-weight: 700;
+    margin-bottom: 5px;
+    text-decoration: none;
+    transition: $main-animation;
+
+
+    
+  }
+}
