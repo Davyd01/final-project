@@ -7,16 +7,24 @@
 
   &__promoution-inner {
     &.commerce__promoution-inner {
-      border-bottom: 4px solid rgba(255, 255, 255, 0.50)
+      border-bottom: 4px solid rgba(255, 255, 255, 0.50);
+
     }
   }
 
   &__promoution-section {
+    &.commerce__promoution-section {
+      padding-top: 60px;
+    }
   }
 
   &__promoution-logo {
     &.commerce__promoution-logo {
       margin: 30px auto 28px;
+
+      @media (min-width: $breakpoint-md) {
+        margin: 0 auto 42px;
+      }
     }
   }
 
@@ -27,6 +35,11 @@
         @include gradient-text;
         text-align: center;
         margin-bottom: 28px;
+
+        @media (min-width: $breakpoint-md) {
+          font-size: 38px;
+          
+        }        
       }
 
       p {
@@ -50,6 +63,6 @@
     display: inline-block;
     border-radius: 12px;
     color: $white-color;
-    
+    font-weight: 700; 
   }
 }
