@@ -42,3 +42,8 @@ $main-animation: all .5s linear;
   line-height: 35px;
 }
 
+@mixin secondary-gradient-text {
+  background: $main-gradient;
+  color: transparent;
+  background-clip: text;
+}

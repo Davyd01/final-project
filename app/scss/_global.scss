@@ -44,6 +44,7 @@ background: #CACADB;
 
   &.wrapper-no-bg {
     background: $white-color;
+    margin-bottom: 0;
 
     &::before, &::after {
       content: '';
