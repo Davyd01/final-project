@@ -1,0 +1,55 @@
+
+
+.services {
+
+  &__promoution {
+  }
+
+  &__promoution-inner {
+    &.commerce__promoution-inner {
+      border-bottom: 4px solid rgba(255, 255, 255, 0.50)
+    }
+  }
+
+  &__promoution-section {
+  }
+
+  &__promoution-logo {
+    &.commerce__promoution-logo {
+      margin: 30px auto 28px;
+    }
+  }
+
+
+  &__promoution-content {
+    &.commerce__promoution-content {
+      h3 {
+        @include gradient-text;
+        text-align: center;
+        margin-bottom: 28px;
+      }
+
+      p {
+        text-align: center;
+        font-size: 19px;
+        margin-bottom: 28px;
+        line-height: 30px;
+        
+      }
+    }
+  }
+}
+.commerce {
+  &__promoution-btn {
+    text-align: center;
+  }
+
+  &__promoution-button {
+    padding: 18px 30px;
+    background: $regular-color;
+    display: inline-block;
+    border-radius: 12px;
+    color: $white-color;
+    
+  }
+}
