@@ -13,6 +13,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
+    gap: 21px;
     
   }
 }
@@ -40,6 +41,26 @@
       order: 1;
       align-items: center;
       margin-bottom: 0;
+      gap: 26px;
+      flex: 1 1 49%;
+    }
+  }
+
+  &__flex-dot {
+
+    position: relative;
+
+
+    &::before {
+      content: '';
+      top: 50%;
+      transform: translateY(-50%);
+      right: -15px;
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: $grey-text-color;
+      border-radius: 50%;
     }
   }
 
@@ -54,12 +75,27 @@
       flex-direction: row;
       flex-wrap: wrap;
       order: 3;
+      gap: 26px;
     }
   }
 
   &__flex-faceb {
     width: 38px;
     height: 38px;
+    position: relative;
+    
+
+    &::before {
+      content: '';
+      top: 50%;
+      transform: translateY(-50%);
+      right: -15px;
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: $grey-text-color;
+      border-radius: 50%;
+    }
   }
 
   &__flex-facebook {
@@ -71,6 +107,19 @@
   &__flex-phone {
     color: $alt-color;
     font-weight: 700;
+    position: relative;
+
+    &::before {
+      content: '';
+      top: 50%;
+      transform: translateY(-50%);
+      right: -16px;
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: $grey-text-color;
+      border-radius: 50%;
+    }
     
   }
 
@@ -90,6 +139,8 @@
       display: flex;
     flex-direction: column;
     order: 2;
+    flex: 1 1 48%;
+    text-align: right;
     }
     
 
