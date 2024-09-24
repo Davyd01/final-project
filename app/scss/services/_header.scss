@@ -33,8 +33,13 @@
 
     span + span {
       font-weight: 400;
-      font-size: 36px;
-      
+      font-size: 28px;
+      @media (min-width: $breakpoint-md) {
+        font-size: 34px;
+      }
+      @media (min-width: $breakpoint-md) {
+        font-size: 38px;
+      }
     }
   }
 }

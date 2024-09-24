@@ -1,0 +1,167 @@
+
+
+
+
+.wrapper {
+}
+.wrapper-no-bg {
+}
+.header {
+
+		&__container {
+		}
+
+		&__main {
+		}
+
+		&__head {
+		}
+
+		&__social {
+		}
+
+		&__lang {
+      
+		}
+
+		&__lang-item {
+      &.publications__color-grey {
+        color: $grey-text-color;
+
+        &::before {
+          @media (min-width: $breakpoint-md) {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: $grey-separator-color;
+            top: 50%;
+            right: -12px;
+            transform: translate(0, -50%);
+            border-radius: 50%;
+            pointer-events: none;
+          }
+        }
+      }
+		}
+
+		&__social-adress {
+      &.publications__color-grey {
+        color: $grey-text-color;
+        &::before {
+          @media (min-width: $breakpoint-md) {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: $grey-separator-color;
+            top: 50%;
+            right: -12px;
+            transform: translate(0, -50%);
+            border-radius: 50%;
+            pointer-events: none;
+          }
+        }
+      }
+		}
+
+		&__social-phone {
+      &.publications__color-grey {
+        color: $grey-text-color;
+        &::before {
+          @media (min-width: $breakpoint-md) {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: $grey-separator-color;
+            top: 50%;
+            right: -12px;
+            transform: translate(0, -50%);
+            border-radius: 50%;
+            pointer-events: none;
+          }
+        }
+      }
+		}
+
+		&__social-faceb {
+      
+		}
+
+		&__social-facebook {
+      &.publications__color-grey {
+        fill: $grey-text-color;
+      }
+		}
+
+		&__logo {
+		}
+
+		&__logo-link {
+		}
+
+		&__logo-logo {
+		}
+
+		&__burger {
+      &.publications__color-blue {
+        span {
+          border-bottom: 2px solid #323264;
+        border-top: 2px solid #323264;
+
+        &::before {
+          background: #323264;
+        }
+        }
+        
+      }
+		}
+
+		&__nav {
+		}
+
+		&__nav-close {
+		}
+
+		&__nav-list {
+		}
+
+		&__nav-item {
+		}
+
+		&__nav-link {
+      &.publications__color-blue {
+        color: $regular-color;
+      }
+      &.current {
+        color: $accent-color;
+      }
+		}
+}
+
+.publications {
+
+		&__color-grey {
+		}
+
+		&__color-blue {
+		}
+}
+.active {
+}
+.current {
+}
+
+
+.services__db {
+
+  font-size: 28px;
+  &.publications__color-black {
+    color: #323264;
+    font-size: 28px;
+
+  }
+}
+  
+

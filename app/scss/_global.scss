@@ -9,6 +9,8 @@ body {
 }
 
 .wrapper {
+
+  
   background: $gradient-super-soft;
   border-radius: 0px 0px 12px 12px;
   position: relative;
@@ -38,7 +40,19 @@ background: #CACADB;
     background: #E7E7F2;
     
   }
+
+
+  &.wrapper-no-bg {
+    background: $white-color;
+
+    &::before, &::after {
+      content: '';
+      width: 0;height: 0;
+    }
+  }
 }
+
+
 
 .container {
   padding: 0 30px;

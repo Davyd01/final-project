@@ -16,7 +16,7 @@
 
   &__promoution-inner {
     &.commerce__promoution-inner {
-      border-bottom: 4px solid rgba(255, 255, 255, 0.50);
+      // border-bottom: 4px solid rgba(255, 255, 255, 0.50);
 
     }
   }
@@ -73,5 +73,12 @@
     border-radius: 12px;
     color: $white-color;
     font-weight: 700; 
+    cursor: pointer;
+    transition: $main-animation;
+
+    &:hover {
+      background: $regular-active-color;
+      
+    }
   }
 }
