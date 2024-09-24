@@ -71,7 +71,11 @@ background: #CACADB;
 }
 
 
-.svg {
+.hidden {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -20;
   
   // display: none;
 }
