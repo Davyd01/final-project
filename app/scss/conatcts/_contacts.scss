@@ -1,0 +1,193 @@
+
+
+.contacts {
+
+  margin-bottom: 30px;
+
+  @media (min-width: $breakpoint-md) {
+    margin-bottom: 60px;
+  }
+
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+
+    @media (min-width: $breakpoint-xl) {
+      max-width: 1080px;
+      margin: 0 auto 60px;
+    }
+    @media (min-width: $breakpoint-xxl) {
+      max-width: 1360px;
+      
+    }
+  }
+  
+  &__main {
+    @media (min-width: $breakpoint-xl) {
+      flex: 1 1 50%;
+    }
+  }
+  
+  &__main-city {
+    @include secondary-gradient-text;
+    font-size: 21px;
+    
+    line-height: 30px;
+    
+  }
+  
+  &__main-street {
+    @include secondary-gradient-text;
+    font-size: 21px;
+    line-height: 30px;
+    padding-bottom: 30px;
+    border-bottom: 3px solid $grey-separator-color;
+  }
+  
+  &__main-phone {
+    @include secondary-gradient-text;
+    font-size: 21px;
+    line-height: 30px;
+    padding: 30px 0 15px;
+    
+  }
+  
+  &__main-email {
+    padding-bottom: 30px;
+    border-bottom: 3px solid $grey-separator-color;
+    color: $regular-color;
+    font-size: 21px;
+    line-height: 30px;
+  }
+  
+  &__main-face {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  &__main-facebook {
+    width: 38px;
+    height: 38px;
+    fill: $regular-color;
+    
+  }
+  
+  &__main-facetext {
+    
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 1px;
+    align-self: center;
+    
+    a {
+      text-decoration: none;
+      color: $regular-color;
+      text-transform: uppercase;
+      padding-left: 10px;
+      
+      
+    }
+
+  }
+
+  &__forms {
+    padding: 30px;
+    background: $grey-color;
+    border-radius: 12px;
+
+    @media (min-width: $breakpoint-xl) {
+      flex: 1 1 50%;
+    }
+    
+  }
+  
+  &__forms-title {
+    @include gradient-text;
+    // text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  &__forms-forms {
+  }
+  
+  &__forms-name {
+    @include main-forms;
+    background: var(--Basic-White, #FFF);
+    border: 1px solid var(--Basic-White, #FFF);
+    margin-bottom: 15px;
+    width: 100%;
+
+    &::placeholder {
+      color: $grey-text-color;
+    }
+    
+    
+    
+  }
+  
+  &__forms-message {
+    @include main-forms;
+    font-family: Montserrat;
+    font-size: 16px;
+    min-height: 130px;
+    margin-bottom: 30px;
+
+    
+    line-height: 26px;
+
+    &::placeholder {
+      color: $grey-text-color;
+      
+    }
+  }
+  
+  &__forms-question {
+    color: $grey-text-color;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    
+  }
+  
+  &__forms-phone {
+    @include main-forms;
+    margin-bottom: 15px;
+
+    &::placeholder {
+      color: $grey-text-color;
+    }
+  }
+  
+  &__forms-email {
+
+    @include main-forms;
+    margin-bottom: 30px;
+
+
+    &::placeholder {
+      color: $grey-text-color;
+    }
+  }
+  
+  &__forms-btn {
+  }
+  
+  &__forms-button {
+    box-shadow: 0px 0px 20px 0px rgba(36, 163, 255, 0.50);
+    border-radius: 12px;
+    padding: 18px 30px;
+    width: 100%;
+    background: $regular-color;
+    color: $white-color;
+    font-weight: 700;
+  }
+  }
+  

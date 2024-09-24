@@ -62,6 +62,7 @@
     
     &.active {
       @include gradient-text;
+      font-size: 38px;
     }
     &:hover {
       color: $accent-color;
