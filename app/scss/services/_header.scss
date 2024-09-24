@@ -1,0 +1,43 @@
+
+
+.services__hidden {
+  background: none;
+  min-height: auto;
+  
+}
+
+
+.services__none {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -20;
+}
+
+.services__margin {
+  margin-bottom: 30px;
+}
+
+.services__title-service {
+  // text-align: center;
+}
+
+
+.header__logo {
+  &.services__db {
+    span {
+      display: block;
+      font-size: 40px;
+      font-weight: 700;
+    }
+
+    span + span {
+      font-weight: 400;
+      font-size: 36px;
+      
+    }
+  }
+}
+
+
+

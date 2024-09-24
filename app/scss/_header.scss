@@ -295,6 +295,14 @@
           // border-bottom: 1px solid $accent-color;
         }
       }
+
+      &.current {
+        color: $accent-color;
+
+        &:hover::before {
+          transform: scale(0);
+        }
+      }
 		}
 
 		&__inner {

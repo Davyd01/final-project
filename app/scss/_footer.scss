@@ -42,7 +42,7 @@
       align-items: center;
       margin-bottom: 0;
       gap: 26px;
-      flex: 1 1 49%;
+      flex: 1 1 47%;
     }
   }
 
@@ -50,18 +50,20 @@
 
     position: relative;
 
-
-    &::before {
-      content: '';
-      top: 50%;
-      transform: translateY(-50%);
-      right: -15px;
-      position: absolute;
-      width: 6px;
-      height: 6px;
-      background: $grey-text-color;
-      border-radius: 50%;
+    @media (min-width: $breakpoint-md) {
+      &::before {
+        content: '';
+        top: 50%;
+        transform: translateY(-50%);
+        right: -15px;
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: $grey-text-color;
+        border-radius: 50%;
+      }
     }
+    
   }
 
   &__flex-social {
@@ -84,18 +86,20 @@
     height: 38px;
     position: relative;
     
-
-    &::before {
-      content: '';
-      top: 50%;
-      transform: translateY(-50%);
-      right: -15px;
-      position: absolute;
-      width: 6px;
-      height: 6px;
-      background: $grey-text-color;
-      border-radius: 50%;
+    @media (min-width: $breakpoint-md) {
+      &::before {
+        content: '';
+        top: 50%;
+        transform: translateY(-50%);
+        right: -15px;
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: $grey-text-color;
+        border-radius: 50%;
+      }
     }
+    
   }
 
   &__flex-facebook {
@@ -109,17 +113,21 @@
     font-weight: 700;
     position: relative;
 
-    &::before {
-      content: '';
-      top: 50%;
-      transform: translateY(-50%);
-      right: -16px;
-      position: absolute;
-      width: 6px;
-      height: 6px;
-      background: $grey-text-color;
-      border-radius: 50%;
+
+    @media (min-width: $breakpoint-md) {
+      &::before {
+        content: '';
+        top: 50%;
+        transform: translateY(-50%);
+        right: -16px;
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        background: $grey-text-color;
+        border-radius: 50%;
+      }
     }
+
     
   }
 
