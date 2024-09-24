@@ -1,6 +1,15 @@
 
 
 .services {
+  @media (min-width: $breakpoint-xl) {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $breakpoint-xxl) {
+    max-width: 1360px;
+    margin: 0 auto;
+  }
 
   &__promoution {
   }
