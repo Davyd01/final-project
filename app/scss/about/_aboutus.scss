@@ -1,0 +1,60 @@
+.aboutus {
+
+  &__flex {
+    margin-bottom: 60px;
+
+    @media (min-width: $breakpoint-lg) {
+      display: flex;
+      gap: 60px;
+      align-items: flex-start;
+    }
+    @media (min-width: $breakpoint-xl) {
+      max-width: 1080px;
+      margin: 0 auto 60px;
+    }
+    @media (min-width: $breakpoint-xxl) {
+      max-width: 1360px;
+    }
+  }
+
+  
+  &__description {
+    font-size: 19px;
+    line-height: 30px;
+    margin-bottom: 30px;
+    p {
+      margin-bottom: 15px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      margin-bottom: 0;
+      flex: 1 1 45%;
+    }
+    @media (min-width: $breakpoint-xl) {
+      flex: 1 1 60%;
+    }
+
+  }
+  
+  &__title {
+    @include gradient-text;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: 38px;
+    }
+
+    @media (min-width: $breakpoint-lg) {
+      
+      flex: 1 1 45%;
+    }
+    @media (min-width: $breakpoint-xl) {
+      flex: 1 1 20%;
+    }
+  }
+  }
+  .container {
+  }
+  

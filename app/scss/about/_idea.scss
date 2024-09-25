@@ -1,0 +1,155 @@
+.idea {
+
+  &__flex {
+
+    @media (min-width: $breakpoint-lg) {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 60px;
+      align-items: flex-start;
+    }
+    @media (min-width: $breakpoint-xl) {
+      max-width: 1080px;
+      margin: 0 auto 60px;
+    }
+    @media (min-width: $breakpoint-xxl) {
+      max-width: 1360px;
+    }
+  }
+  
+  &__description {
+
+
+    p + p {
+      margin-top: 15px;
+    }
+
+
+    @media (min-width: $breakpoint-lg) {
+      flex: 1 1 45%;
+    }
+  }
+  
+  &__description--title {
+    @include gradient-text;
+    margin-bottom: 30px;
+
+    @media (min-width: $breakpoint-md) {
+      font-size: 38px;
+      line-height: 45px;
+    }
+  }
+  
+  &__descriptioon--text {
+    font-size: 19px;
+    line-height: 30px;
+    
+    
+  }
+  
+  &__statistic {
+    padding-left: 30px;
+    border-left: 4px solid $grey-separator-color;
+    margin: 30px 0;
+
+    @media (min-width: $breakpoint-md) {
+      margin-bottom: 60px;
+    }
+    @media (min-width: $breakpoint-lg) {
+      flex: 1 1 20%;
+      margin: 0 auto;
+    }
+  }
+  
+  &__statistic--description {
+    display: flex;
+    justify-content: flex-start;
+    gap: 8px;
+
+
+  }
+  
+  &__statistic--svg {
+    width: 32px;
+    height: 32px;
+    
+  }
+  
+  &__statistic--numbers {
+    @include gradient-text;
+    font-size: 36px;
+  }
+  
+  &__statistic--text {
+    margin-bottom: 40px;
+    @include secondary-gradient-text;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  }
+  
+
+
+
+
+  .about__img {
+    display: flex;
+    width: 100%;
+    height: 114px;
+    margin-bottom: 30px;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      flex: 1 1 100%;
+      object-fit: cover;
+    }
+
+    span {
+      position: absolute;
+      color: $white-color;
+      text-shadow: 0px 15px 30px rgba(40, 40, 86, 0.80);
+      font-size: 36px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 13px;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.8;
+      
+
+      @media (min-width: $breakpoint-md) {
+        font-size: 46px;
+        letter-spacing: 63px;
+      }
+      @media (min-width: $breakpoint-md) {
+        font-size: 46px;
+        letter-spacing: 63px;
+      }
+      @media (min-width: $breakpoint-lg) {
+        font-size: 86px;
+      }
+      @media (min-width: $breakpoint-xl) {
+        font-size: 96px;
+      }
+    }
+
+    @media (min-width: $breakpoint-md) {
+      height: 233px;
+      margin-bottom: 60px;
+    }
+    @media (min-width: $breakpoint-lg) {
+      height: 311px;
+    }
+    @media (min-width: $breakpoint-xl) {
+      height: 438px;
+    }
+    @media (min-width: $breakpoint-xxl) {
+      height: 584px;
+    }
+  }
+  
+  
