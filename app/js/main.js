@@ -89,119 +89,221 @@ const swiper = new Swiper('.swiper', {
 
 
 
-const nameInput = document.getElementById('name');
-const messageInput = document.getElementById('message');
-const phoneInput = document.getElementById('phone');
-const emailInput = document.getElementById('email');
-const sendButton = document.getElementById('send-btn');
+// const nameInput = document.getElementById('name');
+// const messageInput = document.getElementById('message');
+// const phoneInput = document.getElementById('phone');
+// const emailInput = document.getElementById('email');
+// const sendButton = document.getElementById('send-btn');
 
 
-sendButton.addEventListener('click', (e) => {
-  e.preventDefault()
+// sendButton.addEventListener('click', (e) => {
+//   e.preventDefault()
 
 
-  const nameValue = nameInput.value.trim();
-  const messageValue = messageInput.value.trim();
-  const phoneValue = phoneInput.value.trim()
-  const emailValue = emailInput.value.trim()
+//   const nameValue = nameInput.value.trim();
+//   const messageValue = messageInput.value.trim();
+//   const phoneValue = phoneInput.value.trim()
+//   const emailValue = emailInput.value.trim()
   
 
 
-  if (validateName(nameValue)) {
-    console.log(`Name is valid: "${nameValue}"`)
-  } else {
-    console.log('Name is invalid: the field is required.')
+//   if (validateName(nameValue)) {
+//     console.log(`Name is valid: "${nameValue}"`)
+//   } else {
+//     console.log('Name is invalid: the field is required.')
+//   }
+
+
+//   if (validateMessage(messageValue)) {
+//     console.log(`Message is valid: "${messageValue}"`)
+//   } else {
+//     console.log('Message is invalid: it must contain at least 5 characters.')
+//   }
+
+
+//   if (validatePhone(phoneValue)) {
+//     console.log(`Phone number is valid: "${phoneValue}"`)
+//   } else {
+//     console.log('Phone number is invalid: it must start with +380 and have 9 digits.');
+//   }
+
+
+//   if (validateEmail(emailValue)) {
+//     console.log(`Email is valid: "${emailValue}"`);
+//   } else {
+//     console.log('Email is invalid: it must contain "@" and a ".".');
+//   }
+
+
+// })
+
+
+
+// function validateName(nameValue) {
+//   const errorLabelForName = nameInput.nextElementSibling
+
+//   if (nameValue.trim() === '') {
+//     errorLabelForName.textContent = 'Name is required'
+//     errorLabelForName.style.color = 'red'
+//     return false
+//   } else {
+//     errorLabelForName.textContent = ''
+//     return true
+//   }
+// }
+
+
+
+
+// function validateMessage(messageValue) {
+//   const errorLabelforMessage = messageInput.nextElementSibling
+
+//   if (messageValue.trim().length <= 5) {
+//     errorLabelforMessage.textContent = 'Message must be at least 5 characters.';
+//     errorLabelforMessage.style.color = 'red'
+//     return false
+//   } else {
+//     errorLabelforMessage.textContent = ''
+//     return true
+//   }
+// }
+
+
+
+
+// function validatePhone(phoneValue) {
+//   const errorLabelforPhone = phoneInput.nextElementSibling
+
+
+//   const phonePattern = /^\+380\d{9}$/
+
+
+//   if (!phonePattern.test(phoneValue) ) {
+//     errorLabelforPhone.textContent = 'Phone number must start with +380 and contain 9 digits'
+//     errorLabelforPhone.style.color = 'red'
+//     return false
+//   } else {
+//     errorLabelforPhone.textContent = ''
+//     return true
+//   }
+// }
+
+
+
+// function validateEmail(emailValue) {
+//   const errorLabelforEmail = emailInput.nextElementSibling
+
+//   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+
+
+//   if (!emailPattern.test(emailValue)) {
+//     errorLabelforEmail.textContent = 'Email must contain "@" and a ".".';
+//     errorLabelforEmail.style.color = 'red'
+//     return false
+//   } else {
+//     errorLabelforEmail.textContent = ''
+// return true 
+//   }
+// }
+
+
+
+const forms = document.getElementById('form-1')
+
+
+
+forms.addEventListener('submit', (event) => {
+
+  event.preventDefault()
+  
+  const formData = new FormData(forms)
+  const data = Object.fromEntries(formData.entries())
+
+  // console.log(data)
+
+
+  let isValidForm = true
+
+
+  if (!validateName(data)) isValidForm = false
+  if (!validateMessage(data)) isValidForm = false
+  if (!validatePhone(data)) isValidForm = false
+  if (!validateEmail(data)) isValidForm = false
+
+  if (isValidForm) {
+    console.log(data)
+    forms.reset()
   }
 
 
-  if (validateMessage(messageValue)) {
-    console.log(`Message is valid: "${messageValue}"`)
-  } else {
-    console.log('Message is invalid: it must contain at least 5 characters.')
+
+  function showError(fieldId, message) {
+    const field = document.getElementById(fieldId)
+    const errorLabel = field.nextElementSibling
+    errorLabel.textContent = message
+    errorLabel.style.color = 'red'
   }
 
 
-  if (validatePhone(phoneValue)) {
-    console.log(`Phone number is valid: "${phoneValue}"`)
-  } else {
-    console.log('Phone number is invalid: it must start with +380 and have 9 digits.');
+  
+  function validateName(data) {
+
+    
+    if (data.name.trim() === '') {
+      showError('name', 'Name is required')
+      return false
+    } else {
+      showError('name', '')
+      return true
+    }
   }
 
 
-  if (validateEmail(emailValue)) {
-    console.log(`Email is valid: "${emailValue}"`);
-  } else {
-    console.log('Email is invalid: it must contain "@" and a ".".');
+
+  function validateMessage (data) {
+    if (data.message.trim().length < 5) {
+      showError('message', 'Message must be at least 5 characters long')
+      return false
+    } else {
+      showError('message', '');
+    return true;
+    }
   }
+
+
+    
+
+
+
+
+  function validatePhone (data) {
+    const phonePattern = /^\+380\d{9}$/
+    if (!phonePattern.test(data.phone)) {
+      showError('phone', 'Phone number must start with +380 and contain 9 digits')
+      return false
+    } else {
+      showError('phone', '');
+    return true;
+    }
+  }
+
+
+
+  function validateEmail(data) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailPattern.test(data.email)) {
+      showError('email', 'Email must contain "@" and "."')
+      return false
+    } else {
+      showError('email', '')
+      return true
+    }
+  }
+  
+
+
 
 
 })
 
 
-
-function validateName(nameValue) {
-  const errorLabelForName = nameInput.nextElementSibling
-
-  if (nameValue.trim() === '') {
-    errorLabelForName.textContent = 'Name is required'
-    errorLabelForName.style.color = 'red'
-    return false
-  } else {
-    errorLabelForName.textContent = ''
-    return true
-  }
-}
-
-
-
-
-function validateMessage(messageValue) {
-  const errorLabelforMessage = messageInput.nextElementSibling
-
-  if (messageValue.trim().length <= 5) {
-    errorLabelforMessage.textContent = 'Message must be at least 5 characters.';
-    errorLabelforMessage.style.color = 'red'
-    return false
-  } else {
-    errorLabelforMessage.textContent = ''
-    return true
-  }
-}
-
-
-
-
-function validatePhone(phoneValue) {
-  const errorLabelforPhone = phoneInput.nextElementSibling
-
-
-  const phonePattern = /^\+380\d{9}$/
-
-
-  if (!phonePattern.test(phoneValue) ) {
-    errorLabelforPhone.textContent = 'Phone number must start with +380 and contain 9 digits'
-    errorLabelforPhone.style.color = 'red'
-    return false
-  } else {
-    errorLabelforPhone.textContent = ''
-    return true
-  }
-}
-
-
-
-function validateEmail(emailValue) {
-  const errorLabelforEmail = emailInput.nextElementSibling
-
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-
-
-  if (!emailPattern.test(emailValue)) {
-    errorLabelforEmail.textContent = 'Email must contain "@" and a ".".';
-    errorLabelforEmail.style.color = 'red'
-    return false
-  } else {
-    errorLabelforEmail.textContent = ''
-return true 
-  }
-}
