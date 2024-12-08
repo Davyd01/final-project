@@ -106,25 +106,25 @@
 
             </div>
           </div>
-          <div class="contacts__forms">
+          <div id="contacts__forms" class="contacts__forms">
             <h2 class="contacts__forms-title">We would like to help you</h2>
-            <form action="#">
+            <form action="#" id="form-1">
               <div class="contacts__forms-forms">
-                <input class="contacts__forms-name" type="text" id="name" placeholder="Name">
+                <input class="contacts__forms-name" type="text" id="name" placeholder="Name" name="name">
                 <label for="name"></label>
-                <textarea class="contacts__forms-message" placeholder="Message"></textarea>
+                <textarea class="contacts__forms-message" placeholder="Message" id="message" name="message"></textarea>
+                <label for="message"></label>
+              </div>
+            <p class="contacts__forms-question">How to answer you?</p>
+              <input class="contacts__forms-phone" type="text" id="phone" placeholder="Phone number" name="phone">
+              <label for="phone"></label>
+              <input class="contacts__forms-email" type="email" id="email" placeholder="Email" name="email">
+              <label for="email"></label>
+              <div class="contacts__forms-btn">
+                <button class="contacts__forms-button" id="send-btn">Send message</button>
               </div>
             </form>
-            <p class="contacts__forms-question">How to answer you?</p>
-            <form action="#">
-              <input class="contacts__forms-phone" type="text" id="phone" placeholder="Phone number">
-              <label for="phone"></label>
-              <input class="contacts__forms-email" type="email" id="email" placeholder="Email">
-              <label for="email"></label>
-            </form>
-            <div class="contacts__forms-btn">
-              <button class="contacts__forms-button">Send message</button>
-            </div>
+            
           </div>
         </div>
       </div>
